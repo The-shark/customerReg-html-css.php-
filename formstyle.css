@@ -1,0 +1,29 @@
+.container {
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    padding: 40px;
+    margin: 80px;
+}
+
+input[type='submit '] {
+    background-color: orange;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 30px;
+}
+
+input[type='radio '] {
+    color: white;
+    border-radius: 5px;
+    width: 10%;
+}
+
+input {
+    width: 80%;
+    padding: 12px;
+    border-radius: 4px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: none;
+}

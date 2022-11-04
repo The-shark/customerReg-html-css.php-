@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="formstyle.css">
+
+
+</head>
+
+<body>
+    <form action='registration.php ' name='contactForm ' onSubmit='validateForm() ' method='POST '>
+        <div class='container '>
+            <label for="fname"><b>First Name</b></label>
+            <div>
+
+                <input type='text ' name='fname ' placeholder='First Name ' />
+            </div>
+            <label for="surname"><b>Surname</b></label>
+
+            <div>
+                <input type='text ' name='surname ' placeholder='Surname ' />
+            </div>
+            <label for="doe"><b>Date of Engagement</b></label>
+            <div>
+                <input type='date ' name='doe ' value='2004-02-11 ' placeholder='Date of Engagement ' />
+            </div>
+            <label for="age"><b>Age</b></label>
+            <div>
+                <input type='number ' name='age ' placeholder='Age ' />
+            </div>
+            <label for="fname"><b>Of Age</b></label>
+            <div>
+                <input type='text ' name='ofAge ' placeholder='Of Age ' />
+            </div>
+            <label for="fname"><b>Gender</b></label>
+            <div>
+                <input name='selectGender ' type='radio ' value='male ' /> Male
+                <input name='selectGender ' type='radio ' value='female ' /> Female
+            </div>
+            <div>
+                <input type='submit ' name='submit ' value='Submit ' />
+            </div>
+
+        </div>
+    </form>
+    <script src="./formvalidate.js"></script>
+    <script type='text/javascript '>
+        function validateForm() {
+            var firstname = document.contactForm.fname;
+            var surname = document.contactForm.surname;
+            var dae = document.contactForm.doe;
+            var age = document.contactForm.age;
+            var gender = document.contactForm.selectGender;
+
+            if (firstname == ' ') {
+                alert('Enter your first name ');
+                return false;
+
+            }
+            if (surname == ' ') {
+                alert('Enter your surname ');
+                return false;
+
+            }
+            if (dae == ' ') {
+                alert('Enter your date your engagement ');
+                return false;
+            }
+
+            if (age == ' ') {
+                alert('Enter your age ');
+                return false;
+
+            }
+            if (i == gender.length) {
+                alert('Select a gender ');
+                return false;
+
+            }
+            return true;
+        }
+    </script>
+</body>
+
+</html>
