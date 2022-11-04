@@ -1,36 +1,48 @@
-function validate() {
-    var firstname = document.contactForm.fname;
-    var surname = document.contactForm.surname;
-    var dae= document.contactForm.doe;
-    var age = document.contactForm.age;
-    var gender = document.contactForm.selectGender;
+var firstname = document.contactForm.fname.value;
+var surname = document.contactForm.surname.value;
+var dae = document.contactForm.doe.value;
+var age = document.contactForm.age.value;
+var gender = document.contactForm.gender.value;
 
+function validate() {
+   
     if (firstname == '') {
         alert('Enter your first name');
-        return false;
+        document.contactForm.fname.focus();
         
     }
     if (surname == '') {
         alert('Enter your surname');
-        return false;
+        document.contactForm.surname.focus();
+
         
     }
     if (dae == '') {
         alert('Enter your date your engagement');
-        return false;
+        document.contactForm.doe.focus();
+
     }
 
     if (age == '') {
         alert('Enter your age');
-        return false;
+        document.contactForm.age.focus();
+
         
     }
-    if (i==gender.length) {
-        alert('Select a gender');  
-        return false;
+    if (i == gender.length) {
+        alert('Select a gender');
+        document.contactForm.gender.focus();
+
 
     }
-    return true;
 }
+function setOfAge(){
+    var ofAge = document.contactForm.ofAge.value;
 
-console.log('data');
+    if (age < 18) {
+       ofAge='Minor';
+    } else {
+        ofAge = 'Adult';
+    }
+
+}

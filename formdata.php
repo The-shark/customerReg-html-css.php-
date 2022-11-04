@@ -53,47 +53,31 @@
                                         echo "<td>" . $row['id'] . "</td>";
                                         echo "<td>" . $row['fname'] . "</td>";
                                         echo "<td>" . $row['surname'] . "</td>";
-                                        echo "<td>" . $row['salary'] . "</td>";
+                                        echo "<td>" . $row['doe'] . "</td>";
+                                        echo "<td>" . $row['age'] . "</td>";
+                                        echo "<td>" . $row['gender'] . "</td>";
+
                                         echo "<td>";
-                                            echo '<a href="read.php?id='. $row['id'] .'" class="mr-3" title="View Record" data-toggle="tooltip"><span class="fa fa-eye"></span></a>';
-                                            echo '<a href="update.php?id='. $row['id'] .'" class="mr-3" title="Update Record" data-toggle="tooltip"><span class="fa fa-pencil"></span></a>';
-                                            echo '<a href="delete.php?id='. $row['id'] .'" title="Delete Record" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';
+                                            echo '<a href="readtable.php?id='. $row['id'] .'View Record';
+                                            echo '<a href="update.php?id='. $row['id'] .'Update';
                                         echo "</td>";
                                     echo "</tr>";
                                 }
                                 echo "</tbody>";                            
                             echo "</table>";
-                            // Free result set
-                            unset($result);
+                           
                         } else{
-                            echo '<div class="alert alert-danger"><em>No records were found.</em></div>';
+                            echo '<div><em>No records were found.</em></div>';
                         }
                     } else{
                         echo "Oops! Something went wrong. Please try again later.";
                     }
                     
-                    // Close connection
-                    unset($pdo);
                     ?>
            }
         }
+
         ?>
-       <table id='customers'>
-        <tr>
-            <th>First Name</th>
-            <th>Surname</th>
-            <th>Date of Engagement</th>
-            <th>Age</th>
-            <th>Of Age</th>
-            <th>Gender</th>
-        </tr>
-        <td>Natasha</td>
-        <td>Natasha</td>
-        <td>Natasha</td>
-        <td>Natasha</td>
-        <td>Natasha</td>
-        <td>Natasha</td>
-       </table>
     </body>
   
 </html>
